@@ -1,0 +1,93 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+@use '../base/utilidades' as u;
+
+.over {
+    overflow: hidden;
+   
+}
+.contacto {
+    @include m.bgImage('/src/Img/fondo-4.png');
+   
+    width: 100%; 
+    height: 100svh;
+   
+    @include m.flex(flex, column, space-between, flex-end);
+}
+
+.esquinac {
+    background-color: v.$negro;
+    border-radius: 0 0 .5rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &__encabezadoc {
+      
+        @include m.flex(flex, row, space-between, center);
+    }
+
+    &__parrafoc {
+        font-size: 2rem;
+        color: v.$blanco;
+        margin: 1rem;
+        font-weight: 300;
+       
+    }
+    
+    &__lineac {
+        margin: 0;
+        width: 5rem;
+    }
+}
+
+
+.texto {
+  
+    animation-name: wine;
+    animation-iteration-count:initial;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-direction: reverse;
+    
+    &__parrafoc1 {
+        font-size: clamp(4rem, 6vw, 8rem);
+        color: v.$negro;
+        font-weight: 900;
+        text-align: start;
+        line-height: 1.2;
+        margin: 2rem 2rem;
+    
+        @include m.tablet {
+            
+            line-height: 1;
+        }
+    }
+    
+    &__enlacesc {
+        font-size: clamp(4rem, 6vw, 8rem);
+        color: v.$gris;
+        font-weight: 900;
+        line-height: 1.3;
+        margin-bottom: 12rem;
+        display: inline;
+    
+        @include m.tablet {
+           
+            line-height: 1.1;
+        }
+    }
+}
+
+@keyframes wine {
+    from {
+        transform: translatex(0%);
+        opacity: 1;
+    }
+
+    to {
+        transform: translatex(100%);
+        opacity: 0;
+    }
+}
+

@@ -1,0 +1,25 @@
+@use '../base/variables' as v;
+
+
+.hiddem {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+
+.active {
+    color: crimson;
+}
+
+// .translate {
+//     transform: translateY(0);
+// }
+
+// .translate- {
+//     transform: translateY(-100);
+// }
+
+

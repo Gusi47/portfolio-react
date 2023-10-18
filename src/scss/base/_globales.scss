@@ -1,0 +1,40 @@
+@use '../base/variables' as v; //   Solo Varuables porque esta dentro de la carpeta base
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*-- 1re igual 10 px, --para trabajar en rem. */ 
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    
+    font-family:v.$fuentePrincipal;
+    font-size: 1.6rem;
+    }
+
+p {
+    color: v.$negro;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    list-style-type: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+img, picture, iframe, video, figure {
+  
+    display: block;
+}
+
