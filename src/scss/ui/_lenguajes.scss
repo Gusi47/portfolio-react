@@ -1,0 +1,140 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+@use "../base/utilidades" as u;
+
+.tech {
+  background-color: v.$phantomdark;
+  width: 100%;
+  height: 100vh;
+  @include m.flex(flex, column, flex-end, center);
+}
+
+.esquinat {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &__encabezadot {
+    @include m.flex(flex, row, space-between, center);
+  }
+
+  &__parrafot {
+    font-size: 2rem;
+    color: v.$naranja;
+    margin: 1rem;
+    font-weight: 500;
+  }
+}
+
+.textpa {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+
+  &__parrafot1 {
+    font-size: clamp(3rem, 5vw, 9rem);
+    color: v.$offwhite;
+    font-weight: 700;
+    margin: 0 0 1rem 1rem;
+
+    animation-name: lenguaje;
+    animation-iteration-count: initial;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-direction: normal;
+  }
+
+  @keyframes lenguaje {
+    from {
+      transform: translatex(-100%);
+    }
+
+    to {
+      transform: translatex(0%);
+    }
+  }
+}
+
+.lenguajes {
+  width: 100%;
+  @include m.flex(flex, column, space-between, center);
+  margin-bottom: 3rem;
+
+  @include m.tablet {
+    @include m.flex(flex, row, space-between, center);
+    margin-top: 10rem;
+  }
+}
+
+.boton {
+  display: inline-block;
+  border: 2px solid v.$offwhite;
+  background-color: transparent;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  color: v.$offwhite;
+  font-weight: 700;
+  margin-bottom: 2rem;
+
+  animation-name: boton;
+  animation-iteration-count: initial;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-direction: normal;
+
+  @include m.tablet {
+    margin-left: 1rem;
+  }
+
+  &:hover {
+    border: 2px solid v.$gris;
+    color: v.$gris;
+  }
+}
+
+@keyframes boton {
+  from {
+    transform: translatex(120%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translatex(0%);
+    opacity: 1;
+  }
+}
+
+.lenguaje {
+  animation-name: tech;
+  animation-iteration-count: initial;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-direction: normal;
+  color: v.$offwhite;
+  @include m.flex(flex, column, center, flex-end);
+  margin-right: 2rem;
+
+  &__li {
+    font-size: clamp(3rem, 3.1vw, 3.3rem);
+    color: v.$offwhite;
+    font-weight: 700;
+  }
+
+  &__li1 {
+    font-size: clamp(3rem, 3.1vw, 3.3rem);
+    color: v.$naranja;
+    font-weight: 900;
+  }
+}
+
+@keyframes tech {
+  from {
+    transform: translatex(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translatex(0%);
+    opacity: 1;
+  }
+}

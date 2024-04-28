@@ -1,0 +1,28 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+@use '../base/utilidades' as u;
+
+
+.contenedore {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.text {
+   
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 300;
+    color: v.$gris;
+}
+
+.span1 {
+    display: block;
+    color: v.$gris;
+}
+
+.menor {
+    color: red;
+}
+
